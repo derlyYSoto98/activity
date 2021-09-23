@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/actividad2.css">
+    <link rel="stylesheet" href="icons/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>Aumento</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="actividad1.html"> Actividad 1</a></li>
+            <li> <a href="actividad2.html"> Actividad 2</a></li>
+            <li> <a href="actividad3.html">Actividad 3</a> </li>
+            <li> <a href="actividad4.html"> Actividad 4</a></li>
+        </ul>
+    </nav> 
+    <form action="#" method="POST">
+    <legend>Pago de Nomina <span>"Mes Sorpresa" </span></legend>
+        <div class="input1"><i class="far fa-user"></i>
+        <input type="text" name="txrn" id="nombre" placeholder="Nombre"></div>
+         <br> <br>
+         <div class="input1">
+         <i class="fas fa-hand-holding-usd"></i>
+        <input type="number" name="txt1" id="sueldo" placeholder="Ingrese su sueldo por favor"></div> <br> <br>
+        <button type="button" onclick="aumento();">calcular</button>
+    </form>
+</body>
+</html>
+<script>
+    function aumento(){
+        var nom = document.getElementById('nombre').value;
+        var suel=document.getElementById('sueldo').value;
+        var pago=parseInt(suel);
+        if (pago >= 1000000) {
+            var aumeto = (pago * 5)/100;
+            var total = pago + aumeto ;
+            alert('Apreciado ' + nom +'  Su sueldo total es:   ' + total + '  con un aumento del 5% en este mes SORPRESA!!!');
+        }
+        if (pago <= 800000) {
+            var aumeto = (pago * 10)/100;
+            var total = pago + aumeto ;
+            alert('Apreciado ' + nom +'  Su sueldo total es:   ' + total + '  con un aumento del 10% en este mes SORPRESA!!!');
+        }
+    }
+</script>

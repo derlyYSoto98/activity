@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/actividad1.css">
+    <link rel="stylesheet" href="icons/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+    <title>Empresa</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="actividad1.html"> Actividad 1</a></li>
+            <li> <a href="actividad2.html"> Actividad 2</a></li>
+            <li> <a href="actividad3.html">Actividad 3</a> </li>
+            <li> <a href="actividad4.html"> Actividad 4</a></li>
+        </ul>
+    </nav>
+    <img src="img/logo1.png" alt="Logo" width="450px">
+    <form action="#" method="POST">
+       
+        <legend>Pago de Nomina Semanal </legend>
+        <div class="input1"><i class="far fa-user"></i>
+        <input type="text" name="txrn" id="nombre" placeholder="Nombre"></div>
+         <br> <br>
+         <div class="input1"><i class="far fa-clock"></i>
+        <input type="number" name="txt1" id="hora" placeholder="Total horas laboradas"></div> <br> <br>
+        <button type="button" onclick="realizar_operacion();">calcular</button>
+       
+    </form>
+</body>
+</html>
+<script>
+    
+    function realizar_operacion(){
+        var nom = document.getElementById('nombre').value;
+        var horas =document.getElementById('hora').value;
+        var rec= parseInt(horas);
+        if (horas<=40) {
+            var total = horas * 10000;
+            alert('Apreciado ' + nom +'  Su sueldo total es:   ' + total);
+        }
+
+        if (horas>40) {
+            var xtra = horas - 40;
+           var stra = xtra * 15000;
+           var valor= stra + 400000;
+            alert('Apreciado' + nom + '   Su sueldo total con horas extras es:   ' + valor);
+        }
+    }
+</script>

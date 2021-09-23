@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/actividad3.css">
+    <link rel="stylesheet" href="icons/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <title>Nota Final</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="actividad1.html"> Actividad 1</a></li>
+            <li> <a href="actividad2.html"> Actividad 2</a></li>
+            <li> <a href="actividad3.html">Actividad 3</a> </li>
+            <li> <a href="actividad4.html"> Actividad 4</a></li>
+        </ul>
+    </nav>
+    <form action="#" method="POST">
+        <legend>Notas finales 4° Periodo </legend>
+        <div class="input1"><i class="far fa-user"></i>
+          <input type="text" name="txrn" id="nombre" placeholder="Nombre del estudiante"></div>
+        <div class="input1"><i class="fab fa-app-store"></i>
+          <input type="number" id="nota1" placeholder="Nota 1"> </div><br>
+        <div class="input1"><i class="fab fa-app-store"></i>
+          <input type="number" id="nota2" placeholder="Nota 2"> </div><br>
+        <div class="input1"><i class="fab fa-app-store"></i>
+          <input type="number" id="nota3" placeholder="Nota 3"></div> <br>
+        <div class="input1"><i class="fas fa-award"></i>
+          <input type="number" id="final" placeholder="nota examen Final"> </div><br>
+        <button type="button" onclick="aprobar()" value="Determinar">Determinar</button>
+    </form>
+</body>
+</html>
+<script>
+   function aprobar(){
+    var nom = document.getElementById('nombre').value;
+    var not1= parseInt(document.getElementById('nota1').value);
+    var not2= parseInt(document.getElementById('nota2').value);
+    var not3= parseInt(document.getElementById('nota3').value);
+    var fin= parseInt(document.getElementById('final').value);
+
+   var no1 = (not1 * 20)/100;
+   var no2 = (not2 * 25)/100;
+   var no3 = (not3 * 30)/100;
+    var fi = (fin * 25)/100;
+   var total = no1 + no2 + no3 + fi;
+
+        if (total>=3){
+        alert('El estudiante ' + nom + ' con nota final de  ' + total + '  GANO LA MATERIA DE PROGRAMACION!')
+        }
+        if (total >=2.5 && total<=2.9){
+        alert('El estudiante ' + nom + ' con nota final de  ' + total + ' PERDIO LA MATERIA DE PROGRAMACION!')
+        }
+        if (total <2.5){
+        alert('El estudiante ' + nom + ' con nota final de  ' + total + '  QUEDO EN TRANSICION!')
+        }
+   }
+</script>
+
+    
+   

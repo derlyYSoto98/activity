@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/actividad4.css">
+    <link rel="stylesheet" href="icons/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+    <title>Actividad 4</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="actividad1.html"> Actividad 1</a></li>
+            <li> <a href="actividad2.html"> Actividad 2</a></li>
+            <li> <a href="actividad3.html">Actividad 3</a> </li>
+            <li> <a href="actividad4.html"> Actividad 4</a></li>
+        </ul>
+    </nav>
+    <form action="#" method="POST">
+        <legend>Bienvenido Actividad 4 </legend>
+        <i class="fas fa-award"></i>
+        <input type="number" id="number1" placeholder="Numero 1"> <br>
+        <i class="fas fa-award"></i>
+        <input type="number" id="number2" placeholder="Numero 2"> <br>
+        <i class="fas fa-award"></i>
+        <input type="number" id="number3" placeholder="Numero 3"> <br>
+        
+        <button type="button" onclick="realizar()" value="Determinar">Determinar</button> <br> <br>
+    <div id="prome"></div> <br>
+    <div id="mayo"></div>  <br>
+    <div id="meno"></div>  <br>
+    <div id="parim"></div>  <br> 
+    </form>
+    
+</body>
+</html>
+<script>
+    function realizar(){
+        var num1= parseInt(document.getElementById('number1').value);
+        var num2= parseInt(document.getElementById('number2').value);
+        var num3= parseInt(document.getElementById('number3').value);
+        var promedio = (num1 + num2 + num3)/3;
+        document.getElementById('prome').innerHTML="El promedio de los tres numeros es " + promedio;
+
+        if ((num1 > num2) && (num1 > num3)) {
+            document.getElementById('mayo').innerHTML="El  " + num1 + "   es el mayor de los 3";
+        }
+        if ((num2 > num1) && (num2 > num3)) {
+            document.getElementById('mayo').innerHTML="El  " + num2 + "   es el mayor de los 3";
+        }
+        if ((num3 > num1) && (num3 > num2)) {
+            document.getElementById('mayo').innerHTML="El  " + num3 + "   es el mayor de los 3";
+        }
+
+        if ((num1 < num2) && (num1 < num3)) {
+            document.getElementById('meno').innerHTML="El  " + num1 + "   es el menor de los 3";
+        }
+        if ((num2 < num1) && (num2 < num3)) {
+            document.getElementById('meno').innerHTML="El  " + num2 + "   es el menor de los 3";
+        }
+        if ((num3 < num1) && (num3 < num2)) {
+            document.getElementById('meno').innerHTML="El  " + num3 + "   es el menor de los 3";
+        };
+       var Par=0;
+       var Impar=0;
+
+        if(num1 % 2 == 0){
+           Par ++;
+         }else{
+             Impar ++;
+         }
+         if(num2 % 2 == 0){
+           Par ++;
+         }else{
+             Impar ++;
+         } 
+         if(num3 % 2 == 0){
+           Par++;
+         }else{
+             Impar ++;  
+         }
+         document.getElementById('parim').innerHTML="Numeros pares " + Par + " y numeros impares " + Impar;
+        }  
+</script>

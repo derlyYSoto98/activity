@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    width: 100%;
+    text-align: right;
+    /* background: rgb(231, 7, 7, .2); */
+}
+a{
+    text-decoration: none;
+    color: rgb(58, 54, 54);
+}
+ul{
+    font-family: 'Iceland', cursive;
+    /*  background-color:rgba(191, 0, 0, 0.7);  */
+      color: white;
+      font-size: 1em;
+      font-weight: 30px;
+}
+li{
+    text-align: right;
+    display: inline-block;
+   padding: 10px;
+   font-family: 'Love Ya Like A Sister', cursive;
+}
